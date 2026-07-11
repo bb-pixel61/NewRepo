@@ -16,6 +16,21 @@
         <button id="restart" type="button" title="Restart from the beginning">↺ restart</button>
       </header>
       <canvas id="scene" width="320" height="180"></canvas>
+      <section id="hud">
+        <div class="hud-card">
+          <h2>Map</h2>
+          <canvas id="minimap" width="160" height="100"></canvas>
+          <div id="location"></div>
+        </div>
+        <div class="hud-card">
+          <h2>You</h2>
+          <ul id="character"></ul>
+        </div>
+        <div class="hud-card">
+          <h2>Pack</h2>
+          <ul id="inventory"></ul>
+        </div>
+      </section>
       <main id="panel">
         <div id="text" aria-live="polite"></div>
         <div id="choices"></div>

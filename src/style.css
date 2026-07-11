@@ -67,6 +67,78 @@ body {
   cursor: pointer;
 }
 
+#hud {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 10px;
+}
+
+.hud-card {
+  background: var(--panel);
+  border: 2px solid var(--edge);
+  padding: 8px 10px;
+  min-width: 0;
+}
+
+.hud-card h2 {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 6px;
+}
+
+#minimap {
+  width: 160px;
+  max-width: 100%;
+  image-rendering: pixelated;
+  border: 1px solid var(--edge);
+  display: block;
+}
+
+#location {
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--accent);
+  text-align: center;
+}
+
+.hud-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+}
+
+.hud-card li {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.hud-card li.empty {
+  color: var(--dim);
+  font-style: italic;
+}
+
+.entry-name {
+  color: var(--text);
+  display: block;
+}
+
+.entry-desc {
+  color: var(--dim);
+  display: block;
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  #hud {
+    grid-template-columns: 1fr;
+  }
+}
+
 #panel {
   background: var(--panel);
   border: 2px solid var(--edge);

@@ -12,6 +12,7 @@ import {
   type Story,
 } from './engine/story';
 import { Typewriter } from './engine/typewriter';
+import { renderHud } from './ui/hud';
 import { Draw } from './art/draw';
 import { art } from './art/scenes';
 import { prologue } from './story/prologue';
@@ -55,6 +56,7 @@ function save(): void {
 async function render(): Promise<void> {
   const scene = getScene(story, state.scene);
   (art[scene.art] ?? art['well-bottom'])(draw);
+  renderHud(state);
 
   choicesEl.innerHTML = '';
   await writer.type(visibleText(story, state));
