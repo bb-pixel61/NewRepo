@@ -1,0 +1,136 @@
+:root {
+  --bg: #0b0a12;
+  --panel: #141527;
+  --edge: #2e3a56;
+  --text: #c9d4e4;
+  --dim: #6d7ea0;
+  --accent: #5fe8c8;
+  --accent-dark: #2b8f83;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100%;
+}
+
+#app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#topbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+#title {
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: var(--accent);
+  text-shadow: 0 0 12px rgba(95, 232, 200, 0.35);
+}
+
+#restart {
+  background: none;
+  border: 1px solid var(--edge);
+  color: var(--dim);
+  font: inherit;
+  font-size: 12px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+#restart:hover {
+  color: var(--accent);
+  border-color: var(--accent-dark);
+}
+
+#scene {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  image-rendering: pixelated;
+  border: 2px solid var(--edge);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+#panel {
+  background: var(--panel);
+  border: 2px solid var(--edge);
+  padding: 16px 18px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#text p {
+  line-height: 1.55;
+  font-size: 15px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+#text p:last-child {
+  margin-bottom: 0;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.choice {
+  background: none;
+  border: 1px solid var(--edge);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.choice:hover,
+.choice:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.choice .key {
+  color: var(--dim);
+  margin-right: 8px;
+}
+
+.choice:hover .key {
+  color: var(--accent-dark);
+}
+
+#hints {
+  text-align: center;
+  color: var(--dim);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.ending-mark {
+  color: var(--accent);
+  letter-spacing: 4px;
+  text-align: center;
+}
