@@ -1,10 +1,12 @@
 name: Deploy to GitHub Pages
 
-# The Pages environment only lets the repository's default branch deploy.
-# Triggering on both branches means deploys work whichever one is default.
+# The Pages environment only lets the repository's default branch deploy,
+# and the default is currently claude/newrepo-setup-y194hf. Trigger only
+# from that branch so runs never race or hit the environment gate.
+# If the default branch ever changes to main, swap the branch name below.
 on:
   push:
-    branches: [main, claude/newrepo-setup-y194hf]
+    branches: [claude/newrepo-setup-y194hf]
   workflow_dispatch:
 
 permissions:
