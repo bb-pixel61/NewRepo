@@ -33,9 +33,21 @@
       </section>
       <main id="panel">
         <div id="text" aria-live="polite"></div>
-        <div id="choices"></div>
+        <div id="feedback" aria-live="polite"></div>
+        <form id="prompt">
+          <span class="caret" aria-hidden="true">&gt;</span>
+          <input
+            id="command"
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="what do you do?"
+            aria-label="Type your action"
+          />
+        </form>
       </main>
-      <footer id="hints">click to skip · press 1–9 to choose</footer>
+      <footer id="hints">type your action · 'hint' if stuck · click text to skip</footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

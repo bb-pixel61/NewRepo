@@ -14,9 +14,23 @@ stair that proves somebody built a door to it all.
 
 ## Playing
 
-- **Click** (or press any key) to skip the typewriter effect
-- **Press 1–9** or click to choose
-- Your progress auto-saves; close the tab and pick up where you left off
+You **type what you do**, like the classic Sierra parsers — the game
+matches your intent, not exact words:
+
+```
+> climb down the rope
+> fill my waterskin
+> read the glyphs
+> follow the lights downstream
+```
+
+- Synonyms work (`grab the mushrooms` = `gather the fungus`); ambiguous
+  input gets a clarifying question; unrecognized-but-sensible actions
+  often earn a flavor response
+- `look` re-reads the scene, `i`/`pack` lists your inventory, `where`
+  names your location, `hint` lists what you might try
+- Click the text to skip the typewriter effect
+- Progress auto-saves; close the tab and pick up where you left off
 - Choices set flags and items that change later scenes and endings
 
 ## Development

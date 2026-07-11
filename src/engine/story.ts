@@ -30,6 +30,15 @@ export interface Choice {
   goto: string;
   if?: Condition;
   do?: Effect;
+  /** Extra keywords the parser accepts for this action, beyond the label. */
+  intent?: string[];
+}
+
+/** A flavor reply to typed input that doesn't advance the story. */
+export interface ResponseRule {
+  match: string[];
+  text: string;
+  if?: Condition;
 }
 
 export interface Scene {
@@ -39,6 +48,7 @@ export interface Scene {
   text: Paragraph[];
   onEnter?: Effect;
   choices: Choice[];
+  responses?: ResponseRule[];
   /** Endings terminate play; they render a restart prompt instead of choices. */
   ending?: boolean;
 }

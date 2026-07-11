@@ -160,38 +160,50 @@ body {
   margin-bottom: 0;
 }
 
-#choices {
+#feedback {
+  min-height: 20px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dim);
+  line-height: 1.5;
+}
+
+#feedback:not(:empty) {
+  color: var(--accent-dark);
+}
+
+#prompt {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 8px;
   margin-top: auto;
+  border: 1px solid var(--edge);
+  padding: 8px 12px;
 }
 
-.choice {
+#prompt:focus-within {
+  border-color: var(--accent-dark);
+}
+
+.caret {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+#command {
+  flex: 1;
   background: none;
-  border: 1px solid var(--edge);
+  border: none;
+  outline: none;
   color: var(--text);
   font: inherit;
-  font-size: 14px;
-  text-align: left;
-  padding: 9px 12px;
-  cursor: pointer;
+  font-size: 15px;
+  caret-color: var(--accent);
 }
 
-.choice:hover,
-.choice:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
-  outline: none;
-}
-
-.choice .key {
+#command::placeholder {
   color: var(--dim);
-  margin-right: 8px;
-}
-
-.choice:hover .key {
-  color: var(--accent-dark);
+  font-style: italic;
 }
 
 #hints {
